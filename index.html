@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حملة يلا نصلي - BAGHDAD | صانع الإطارات</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="badge">مبادرة شبابية • بغداد</div>
+    <h1>حملة <span>يلا نصلي</span></h1>
+    <p>ضع صورتك الشخصية داخل الإطار الرسمي للحملة وشاركها بسهولة</p>
+  </header>
+
+  <main class="container">
+    <section class="editor-card">
+      <div class="canvas-wrapper">
+        <canvas id="frameCanvas" width="1080" height="1080"></canvas>
+      </div>
+
+      <div class="controls">
+        <label for="photoInput" class="btn btn-primary">
+          <span>📸 اختر صورتك الشخصية</span>
+          <input type="file" id="photoInput" accept="image/*" hidden />
+        </label>
+
+        <div class="sliders">
+          <div class="control-group">
+            <label for="zoomRange">تكبير / تصغير الصورة</label>
+            <input type="range" id="zoomRange" min="0.4" max="2.5" step="0.02" value="1" />
+          </div>
+
+          <div class="control-group">
+            <label for="xRange">تحريك أفقي (يمين / يسار)</label>
+            <input type="range" id="xRange" min="-450" max="450" step="2" value="0" />
+          </div>
+
+          <div class="control-group">
+            <label for="yRange">تحريك عمودي (أعلى / أسفل)</label>
+            <input type="range" id="yRange" min="-450" max="450" step="2" value="30" />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="resetBtn" class="btn btn-secondary" type="button">إعادة ضبط</button>
+          <button id="downloadBtn" class="btn btn-gold" type="button">⬇️ تحميل الصورة</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>حملة يلا نصلي - BAGHDAD © 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
